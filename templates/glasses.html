@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_content %}
+    <!-- Our shop section -->
+    <div id="about" class="shop">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="shop_img">
+                        <figure><img src="{% static 'images/glasses/gray.jpg' %}" alt="#"/></figure>
+                    </div>
+                </div>
+                <div class="col-md-7 padding_right0">
+                    <div class="max_width">
+                        <div class="titlepage">
+                            <h2>Best Seller!</h2>
+                            <p>The model was designed by one of our best designers to make you feel the edge of the
+                                world! No words needed, prove it yourself!</p>
+                            <a class="read_more" href="{% url 'shop items' %}">Shop Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="about" class="shop">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="shop_img">
+                                <figure><img src="{% static 'images/glasses/golden.jpg' %}" alt="#"/></figure>
+                            </div>
+                        </div>
+                        <div class="col-md-7 padding_right0">
+                            <div class="max_width">
+                                <div class="titlepage">
+                                    <h2>Style Is Everything!</h2>
+                                    <p>Are you bored with the shady world we live in? You may lose a smile, but never
+                                        lose your STYLE!</p>
+                                    <a class="read_more" href="{% url 'shop items' %}">Shop Now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="about" class="shop">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="shop_img">
+                                <figure><img src="{% static 'images/glasses/unisex.jpg' %}" alt="#"/></figure>
+                            </div>
+                        </div>
+                        <div class="col-md-7 padding_right0">
+                            <div class="max_width">
+                                <div class="titlepage">
+                                    <h2>Trust The Brand!</h2>
+                                    <p>No words needed! You already know about them RayBan!</p>
+                                    <a class="read_more" href="{% url 'shop items' %}">Shop Now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

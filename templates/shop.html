@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_content %}
+    <div class="row">
+        {% for item in items %}
+            <div class="col-md-4">
+                <div class="glasses_box">
+                    <img class="product-image" src="{% static 'images/glasses/' %}{{ item.image }}">
+                    <h3><span class="blu">$</span>{{ item.price|floatformat:2 }}</h3>
+                    <p>{{ item.title }}</p>
+                    <button class="read_more justify-content-center"><a href="{{ item.get_absolute_url }}">See More</a></button>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
+{#element.style {#}
+{#    width: 100%;#}
+{#    padding: 1rem;#}
+{#    background: none;#}
+{#    border-radius: 50%;#}
+{#    margin-top: 1rem;#}
+{#}#}

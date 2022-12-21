@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load placeholders %}
+{% block page_content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <div class="login">
+        <div class="form">
+            <div class="logo">
+                <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="#"/></a>
+            </div>
+            <form method="post" action="{% url 'register user' %}">
+                {{ form.username.errors }}
+                <p>
+                    {{ form.username|placeholder:'Create Username: ' }}
+                    {{ form.email.errors }}
+                <p>
+                    {{ form.email|placeholder:'Enter Email: ' }}
+                    {{ form.password1.errors }}
+                <p>
+                    {{ form.password1|placeholder:'Create Password: ' }}
+                    {{ form.password2.errors }}
+                <p>
+                    {{ form.password2|placeholder:'Repeat password: ' }}
+                <p>
+                    <button type="submit">Register</button>
+                </p>
+                <p>Have an account? <a href="{% url 'login user' %}">Log in</a></p>
+                {% csrf_token %}
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_content %}
+    <!-- banner -->
+    <section class="banner_main">
+        <div id="banner1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#banner1" data-slide-to="0" class="active"></li>
+                <li data-target="#banner1" data-slide-to="1"></li>
+                <li data-target="#banner1" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <div class="text-bg">
+                                <h1><span class="blu">Welcome <br></span>To Our Sunglasses</h1>
+                                <figure><img src="{% static 'images/glasses/golden.jpg' %}" alt="#"/></figure>
+                                <a class="read_more text-center" href="{% url 'shop items' %}">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <div class="text-bg">
+                                <h1><span class="blu">Welcome <br></span>To Our Sunglasses</h1>
+                                <figure><img src="{% static 'images/glasses/gray.jpg' %}" alt="#"/></figure>
+                                <a class="read_more text-center" href="{% url 'shop items' %}">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <div class="text-bg">
+                                <h1><span class="blu">Welcome <br></span>To Our Sunglasses</h1>
+                                <figure><img src="{% static 'images/glasses/unisex.jpg' %}" alt="#"/></figure>
+                                <a class="read_more text-center" href="{% url 'shop items' %}">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+            <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+    <div class="glasses">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="titlepage">
+                        <h2>Our Shop</h2>
+                        <p>We have collected the best models all around the Globe and they are here for you. GO TAKE
+                            THEM!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="read_more text-center" href="{% url 'shop items' %}">Shop Now</a>
+        </div>
+    </div>
+    <div id="about" class="shop">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="shop_img">
+                        <figure><img src="{% static 'images/glasses/golden.jpg' %}" alt="#"/></figure>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="max_width">
+                        <div class="titlepage">
+                            <h2>Best sunglasses at our shop</h2>
+                            <p>These classic frames are a style from the 1960s. The frames have a gold frame with blue
+                                lens.
+                                High quality sunglass frames are Shatter Resistant and has UV400 Light Protection.</p>
+                            <a class="read_more justify-content-center" href="{% url 'shop items' %}">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>What say our clients</h2>
+                        <p>At Sungla, there is nothing more important than our customers' opinions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="myCarousel" class="carousel slide clients_Carousel " data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container">
+                                    <div class="carousel-caption ">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="clients_box">
+                                                    <figure><img src="{% static 'images/clients/woman 1.jpg' %}"
+                                                                 alt="#"/></figure>
+                                                    <h3>Sandy Mark</h3>
+                                                    <p>Very high-quality products with an excellent appearance.
+                                                        A must-have!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="carousel-caption">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="clients_box">
+                                                    <figure><img src="{% static 'images/clients/man 1.jpg' %}" alt="#"/>
+                                                    </figure>
+                                                    <h3>Kio Shin</h3>
+                                                    <p>Wherever I wear the glasses, i feel confident like ruling the
+                                                        world!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="carousel-caption">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="clients_box">
+                                                    <figure><img src="{% static 'images/clients/youtime.png' %}"
+                                                                 alt="#"/></figure>
+                                                    <h3>Your Turn</h3>
+                                                    <p>Tell us about your experience with our products. If you have not
+                                                        tried one, now is the time!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <i class='fa fa-angle-left'></i>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <i class='fa fa-angle-right'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end clients section -->
+{% endblock %}

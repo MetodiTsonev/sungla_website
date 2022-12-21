@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load placeholders %}
+{% load static %}
+{% block page_content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <div class="login">
+        <div class="form">
+            <div class="logo" style="padding-bottom: 45px">
+                <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="#"/></a>
+            </div>
+            <form method="post" action="{% url 'login user' %}">
+                {{ form.username.errors }}
+                <p>
+                    {{ form.username|placeholder:'Enter Username: ' }}
+                    {{ form.email.errors }}
+                <p>
+                <p>
+                    {{ form.password2.errors }}
+                    {{ form.password|placeholder:'Enter Password: ' }}
+                <p>
+                    <input type="hidden" name="next" value="{{ next }}">
+                    <button type="submit">Log in</button>
+                <div class="second-option">
+                    <p>Don't have an account? <a href="{% url 'register user' %}">Register</a></p>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+
